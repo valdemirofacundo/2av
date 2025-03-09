@@ -5,12 +5,12 @@ ini_set('display_errors', 1);
 $servername = "localhost";
 $username="root";
 $password="";
-$dbname = "db_bes_pw";
+$dbname = "carimball";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 var_dump($conn);
 
-if(mysqli_connect_errno()){
+if(!conn || mysqli_connect_errno()){
         die("Conexão malsucedida. Erro: " . mysqli_connect_error());
     }else{
         echo "Conexão bem-sucedida.";
