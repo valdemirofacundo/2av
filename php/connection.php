@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+/*error_reporting(E_ALL);
+ini_set('display_errors', 1);*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
 
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
         die("O endereço de e-mail inserido é inválido.");
     } else {
-        echo "Agradecemos pelo contato!<br>";
+        echo "A CARIMBALL agradece pelo seu contato.<br>";
     }
 
     // Conexão
@@ -32,32 +32,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     if (!$conn) {
         die("Conexão malsucedida. Erro: " . mysqli_connect_error());
     } else {
-        echo "Conexão bem-sucedida.<br>";
+        // echo "Conexão bem-sucedida.<br>";
     }
 
-    // Higienizar dados para inserção via SQL
-    $nome = mysqli_real_escape_string($conn, $nome);
-    $email = mysqli_real_escape_string($conn, $email);
-    $assunto = mysqli_real_escape_string($conn, $assunto);
-    $mensagem = mysqli_real_escape_string($conn, $mensagem);
+    // Higienizar dados para inserção via SQL com statements preparados
+    $stmt = $conn->prepare("INSERT INTO formularioCadastro (nome, email, assunto, mensagem) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $nome, $email, $assunto, $mensagem);
 
-    // Query SQL para inserir dados na tabela
-    $sql = "INSERT INTO carimball (nome, email, assunto, mensagem) 
-            VALUES ('$nome', '$email', '$assunto', '$mensagem')";
-
-    // Executar query e buscar erros
-    if (mysqli_query($conn, $sql)) {
-        echo "Sucesso!";
+    // Executar a query + redirecionar
+    if ($stmt->execute()) {
+        header("Location: ../contato.html");
+        exit();
     } else {
-        echo "Erro: " . $sql . "<br>" . mysqli_error($conn);
+        echo "Erro: " . $stmt->error;
     }
 
-    /* Mostrar dados
-    $result = mysqli_query($conn, "SELECT * FROM carimball");
-    while($row = mysqli_fetch_assoc($result)){
-        echo "{$row['nome']} {$row['email']} {$row['assunto']} {$row['mensagem']}<br>";
-    }*/
-
+    $stmt->close();
     mysqli_close($conn);
 }
 ?>
