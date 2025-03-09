@@ -32,11 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     if (!$conn) {
         die("Conexão malsucedida. Erro: " . mysqli_connect_error());
     } else {
-        // echo "Conexão bem-sucedida.<br>";
+        
     }
 
     // Higienizar dados para inserção via SQL com statements preparados
-    $stmt = $conn->prepare("INSERT INTO formularioCadastro (nome, email, assunto, mensagem) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO formularioContato (nome, email, assunto, mensagem) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $nome, $email, $assunto, $mensagem);
 
     // Executar a query + redirecionar
