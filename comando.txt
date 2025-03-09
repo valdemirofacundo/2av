@@ -1,0 +1,45 @@
+Esta avaliação prática contém um roteiro para execução em equipe de até 3 pessoas. Leia com 
+atenção os itens abaixo e desenvolva o website utilizando como ferramenta o NetBeans.
+
+Construa o website de uma empresa especializada no contexto de atividade física. A equipe 
+deve decidir o foco desta atividade física dentre: ginástica, musculação, crossfit, artes marciais 
+ou dança. Outro contexto deve ser acordado com o professor da disciplina. Esta empresa 
+precisa de um site onde membros possam acessar horários de aulas, reservar sessões de 
+personal trainer e obter dicas de desempenho, nutrição e vestuário especializado. Assim, 
+construa este website contendo a seguinte estrutura: 
+• Página inicial contendo a apresentação do negócio, estrutura e diferenciais da 
+empresa. 
+• Páginas internas contendo: horários de aulas, acesso à agenda com personal trainer, 
+dicas de desempenho, nutrição e vestuário especializado, e uma área de “fale 
+conosco”. 
+• Deverá conter links institucionais: redes sociais (Instagram, Facebook, X, Flickr, 
+youtube, etc.) e contatos via website (Fale conosco com formulário web ou link de 
+WhatsApp). 
+• A área “fale conosco” deverá conter formulário web com identificação do usuário, lista 
+de opções de assunto, área de texto descritivo e botão de enviar. 
+o O botão de enviar deve gravar os dados em uma tabela no banco de dados. 
+Pode-se utilizar o PostreSQL ou o MariaDB. 
+o Todos os campos do formulário web devem ser obrigatórios para submissão 
+do conteúdo, exibindo mensagem de erro caso algo não esteja preenchido. 
+• Deve haver uma página administrativa exibindo o resultado dos dados enviados via 
+“Fale conosco”. 
+
+Itens técnicos obrigatórios para avaliação: 
+1. (1,0 ponto) Criação de projeto específico no NetBeans (ou outra IDE utilizada), contendo 
+arquivos HTML na pasta raiz, e as pastas img, css e js, contendo os respectivos tipos de 
+arquivos. O nome do projeto deve ser “PW_Nomes”, onde “Nomes” são os nomes dos 
+autores. 
+2. (2,0 pontos) Estrutura HTML das páginas. 
+a. De uma página deve-se acessar, através de links no menu, todas as outras 
+páginas. 
+b. Informar o nome dos autores como crédito de desenvolvedor no rodapé das 
+páginas. 
+3. (2,0 pontos) Formatação utilizando arquivo(s) .css criado(s) e localizado(s) na pasta css do 
+projeto e arquivo(s) .js criado(s) e localizado(s) na pasta js do projeto. 
+4. (4,0 pontos) Criatividade no webdesign, organização do site e seriedade das informações. 
+Incluindo-se características técnicas como nomes de arquivos, tamanho e organização de 
+imagens, formulário web e mensagens de exceção do formulário web. 
+5. (1,0 ponto) Depois de concluída a avaliação, compactar todo o projeto, junto com o 
+backup do banco de dados, e postá-lo na tarefa do SIGAA dentro do prazo especificado.  
+Deve-se informar o banco de dados e a versão utilizada, e basta um membro da equipe 
+enviar.
