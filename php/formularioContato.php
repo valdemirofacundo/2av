@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     echo "Mensagem: $mensagem<br>";*/
 
     $host = "localhost";
-    $dbname = "message_db";
+    $dbname = "db_pw";
     $username = "root";
     $password = "";
 
@@ -40,6 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     }else{
         echo "Conexão bem-sucedida.";
     }
+}
+
+while($row = mysqli_fetch_assoc($result)){
+    echo("$row["nome"]." ".$row["email"]." ".$row["assunto"]." ".$row["mensagem"]." "<br>");
 }
     
 
