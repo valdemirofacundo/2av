@@ -47,16 +47,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
 
     // Executar query e buscar erros
     if (mysqli_query($conn, $sql)) {
-        echo "Novo registro criado com sucesso!";
+        echo "Sucesso!";
     } else {
         echo "Erro: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    // Mostrar dados
+    /* Mostrar dados
     $result = mysqli_query($conn, "SELECT * FROM carimball");
     while($row = mysqli_fetch_assoc($result)){
         echo "{$row['nome']} {$row['email']} {$row['assunto']} {$row['mensagem']}<br>";
-    }
+    }*/
 
     mysqli_close($conn);
 }
