@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 $servername = "localhost";
 $username="root";
@@ -7,3 +9,11 @@ $dbname = "db_bes_pw";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 var_dump($conn);
+
+if(mysqli_connect_errno()){
+        die("Conexão malsucedida. Erro: " . mysqli_connect_error());
+    }else{
+        echo "Conexão bem-sucedida.";
+    }
+
+?>
