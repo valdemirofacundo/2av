@@ -1,0 +1,47 @@
+body{
+    color: #333333;
+    margin: auto;
+   
+}
+
+figure, img, h1, h2, p{
+    width: 550x;
+    text-align: center;
+}
+
+figure{
+    text-align: center;
+    background-color: #F2EDED;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 30px;
+}
+
+.festivo{
+    height: 400px;
+    width: 500px;
+}
+
+#danca{
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+h1{
+    padding: 10px;
+}
+
+h2{
+    border-bottom: 2px solid #333333; /*fazendo a linha de baixo do história*/
+    font-style: italic;
+    margin-top: 30px;
+}
+
+p{
+    padding: 0 45px;
+    text-indent: 15px;
+}
+
+h1+p{
+    text-indent: 0;
+}
