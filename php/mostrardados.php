@@ -1,13 +1,12 @@
 <?php
-/*error_reporting(E_ALL);
-ini_set('display_errors', 1);*/
-
-// Incluir conexão ao banco de dados
 include('connection.php');
 
-// Query SQL para apanhar dados da tabela 'formularioContato'
-$sql = "SELECT * FROM formularioContato";
+$sql = "SELECT * FROM formulariocontato";
 $result = mysqli_query($conn, $sql);
+
+if (!$result) {
+    die("Erro na consulta: " . mysqli_error($conn));
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +44,9 @@ $result = mysqli_query($conn, $sql);
 
     mysqli_close($conn);
     ?>
+
+    <button type="button" id="sair" name="sair" class="btn btn-primary" onclick="window.location.href='../loginadm.html';">Sair</button>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-J8whBkcPuhjZ/qR2qltmh9ae4QIbLr7hb7ho0WmV1zX3l+KJ6jmFqg1jT4+7VJjS" crossorigin="anonymous"></script>
