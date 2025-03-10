@@ -1,0 +1,74 @@
+body{
+    color: #333333;
+    margin: auto;
+   
+}
+
+figure, img, h1, h2, p, ul, li{
+    width: 550x;
+    text-align: center;
+}
+
+figure{
+    text-align: center;
+    background-color: #F2EDED;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 30px;
+}
+
+figcaption{
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#centro-distribuicao{
+    margin-left: auto; /*leva a imagem pra direita*/
+    margin-right: auto; /*leva a imagem pra esqurda*/
+    width: 550px; /*faz as bordas9cor atrás da imagem encolher*/
+}
+
+#familia-pelho{
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+h1{
+    background-image: url(../img/sobre-background.jpg);
+    padding: 10px;
+}
+
+h2{
+    border-bottom: 2px solid #333333; /*fazendo a linha de baixo do história*/
+    font-style: italic;
+    margin-top: 30px;
+}
+
+p{
+    padding: 0 45px;
+    text-indent: 15px;
+}
+
+p::first-letter{
+    font-weight: bold;
+}
+
+p::first-line{
+    font-variant: small-caps;
+}
+
+h1+p{
+    text-indent: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #007dc6;
+}
+
+a:active{
+    color: #867dc6;
+}
