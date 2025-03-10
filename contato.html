@@ -12,20 +12,18 @@
     <div class="container mt-5">
         <h1 class="mb-4">Fale Conosco</h1>
 
-        <form class="formularioContato" action="php/connection.php" method="POST">
-            <!-- Nome -->
+        <form class="formularioContato" action="php/formulario.php" method="POST">
+            
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome:</label>
                 <input type="text" id="nome" name="nome" class="form-control" required>
             </div>
 
-            <!-- E-mail -->
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail:</label>
                 <input type="email" id="email" name="email" class="form-control" required>
             </div>
 
-            <!-- Assunto -->
             <div class="mb-3">
                 <label for="assunto" class="form-label">Assunto:</label>
                 <select id="assunto" name="assunto" class="form-select" required>
@@ -37,14 +35,12 @@
                 </select>
             </div>
 
-            <!-- Mensagem -->
             <div class="mb-3">
                 <label for="mensagem" class="form-label">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" class="form-control" rows="4" required></textarea>
             </div>
 
-            <!-- Enviar -->
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" id="submit" name="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
 
